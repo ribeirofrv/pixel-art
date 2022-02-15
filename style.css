@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline;
+}
+
+.black {
+  background-color: black;
+}
+
+.teal {
+  background: teal;
+}
+
+.pink {
+  background: pink;
+}
+
+.yellow {
+  background: yellow;
+}
