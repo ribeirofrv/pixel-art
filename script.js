@@ -9,5 +9,6 @@ const createPixelBoard = (size) => {
 };
 
 window.onload = () => {
+  document.querySelector('.color').classList.add('selected');
   createPixelBoard(25);
 };
