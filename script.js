@@ -1,5 +1,6 @@
 const pixelBoard = document.querySelector('#pixel-board'); // seleciona o quadro
 const colorPalette = document.querySelector('#color-palette'); // seleciona paleta de cores
+const clearBoard = document.querySelector('#clear-board');
 
 const createPixelBoard = (size) => {
   for (let line = 0; line < size; line += 1) {
@@ -23,8 +24,18 @@ const toPaint = () => {
   });
 };
 
+const toClearBoard = () => {
+  const pixels = document.querySelectorAll('.pixel');
+  clearBoard.addEventListener('click', (event) => {
+    for (let key = 0; key < pixels.length; key += 1) {
+      pixels[key].style.backgroundColor = 'white';
+    }
+  });
+};
+
 window.onload = () => {
   document.querySelector('.color').classList.add('selected');
   createPixelBoard(25);
   toPaint();
+  toClearBoard();
 };
