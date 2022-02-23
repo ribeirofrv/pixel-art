@@ -1,6 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap') ;
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background: no-repeat url('bg_pixel.svg');
+  background-size: contain;
+  height: 100vh; /* Tentativa de preenchimento da tela */
+}
+
+header {
+  text-align: center;
+}
+
+#title {
+  font-size: 14px;
+}
+
+#menu {
+  background-color: rgb(223, 212, 212);
+  border: 3px solid gray;
+  display: block;
+  margin: 15px auto;
+  width: 40%;
+  padding: 15px;
 }
 
 .standardSize {
@@ -28,9 +55,13 @@
 }
 
 #pixel-board {
-  width: 213px;
+  max-width: 90%;
+  margin: 15px auto;
+  line-height: 0;
+  display: table; /* Dica by Bea turma 14b */
 }
 
 .pixel {
   background: white;
+  display: table-cell; /* Dica by Bea turma 14b */
 }

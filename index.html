@@ -5,20 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <title>Pixel's Art</title>
 </head>
 <body>
   <main>
     <header>
+      <h1>Pixel's Art</h1>
       <h1 id="title">Paleta de Cores</h1>
-      <menu>
+      <menu id="menu">
         <section id="color-palette">
           <div class="color standardSize black"></div>
           <div class="color standardSize teal"></div>
           <div class="color standardSize pink"></div>
           <div class="color standardSize yellow"></div>
+          <!-- <button id="random-color">&#128260;</button> -->
         </section>
-        <button type="clear" id="clear-board" alt="Limpar Quadro">Limpar</button>
+        <section id="config">
+          <button type="clear" id="clear-board" alt="Limpar Quadro">Limpar</button>
+          <input type="number" id="board-size" min="1" placeholder="Número de pixels">
+          <button id="generate-board">VQV</button>
+        </section>
       </menu>
     </header>
     <section id="pixel-board"></section>
