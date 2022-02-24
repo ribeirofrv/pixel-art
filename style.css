@@ -8,9 +8,9 @@
 }
 
 body {
-  background: no-repeat url('bg_pixel.svg');
-  background-size: contain;
-  height: 100vh; /* Tentativa de preenchimento da tela */
+  background-image: url('bg_pixel.svg');
+  background-size: cover;
+  height: 100vh;
 }
 
 header {

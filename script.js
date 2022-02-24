@@ -8,11 +8,12 @@ const buttonVQV = document.querySelector('#generate-board');
 // Cria Quadro de Pixel
 // Em desenvolvimento...
 const createPixelBoard = (size) => {
-  for (let line = 0; line < size; line += 1) {
+  for (let indexLine = 0; indexLine < size; indexLine += 1) {
     // cria div pixel's
     const pixelsLine = document.createElement('div');
+    // pixelsLine.classList.add('pixel');
     pixelBoard.appendChild(pixelsLine).classList.add('line');
-    for (let column = 0; column < size; column += 1) {
+    for (let indexColumn = 0; indexColumn < size; indexColumn += 1) {
       // cria pixel's dentro das div's
       const pixels = document.createElement('div');
       pixelsLine.appendChild(pixels).classList.add('pixel');
@@ -50,6 +51,7 @@ const toClearBoard = () => {
 };
 
 // Baseado no repositório da Beatriz Ribeiro Turma 14
+// Em desenvolvimento
 const resetBoard = () => {
   pixelBoard.innerHTML = ''; // Reseta quadro de pixels
 };
@@ -63,18 +65,19 @@ const generateBoard = () => {
       alert('Board inválido!');
     } else if (size < 5) {
       createPixelBoard(5);
+    } else if (size > 50) {
+      createPixelBoard(50);
     } else {
       resetBoard();
       createPixelBoard(boardSize);
     }
-    boardSize.innerText = '';
   });
 };
 
 window.onload = () => {
   document.querySelector('.color').classList.add('selected');
   createPixelBoard(5);
+  generateBoard();
   toPaint();
   toClearBoard();
-  generateBoard();
 };
