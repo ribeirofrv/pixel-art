@@ -4,17 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', monospace;
 }
 
 body {
   background-image: url('bg_pixel.svg');
   background-size: cover;
   height: 100vh;
+  text-transform: uppercase;
 }
 
 header {
+  margin-top: 25px;
+  text-shadow: 1px 1px 2px white;
   text-align: center;
+  line-height: 1.2;
 }
 
 #title {
@@ -22,12 +26,24 @@ header {
 }
 
 #menu {
-  background-color: rgb(223, 212, 212);
-  border: 3px solid gray;
+  background: rgba(185, 176, 194, 1);
+  border: 5px solid rgba(64, 66, 61);
+  border-radius: 8px;
   display: block;
   margin: 15px auto;
   width: 40%;
   padding: 15px;
+}
+
+#random-color {
+  background: rgba(61, 153, 26, 1);
+  color: aliceblue;
+  padding: 10px;
+}
+
+#color-palette .color {
+  border: solid rgba(64, 66, 61);
+  border-radius: 5px;
 }
 
 .standardSize {
@@ -38,20 +54,28 @@ header {
   cursor: pointer;
 }
 
+#clear-board {
+  background: rgba(197, 132, 27, 1);
+  color: aliceblue;
+}
+
+#generate-board {
+  background: rgba(39, 105, 153, 1);
+  color: aliceblue;
+}
+
+button {
+  border: solid rgba(64, 66, 61);
+  border-radius: 3px;
+  padding: 5px;
+  text-transform: uppercase;
+
+  /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-shadow */
+  text-shadow: 1px 1px 2px black;
+}
+
 .black {
   background: black;
-}
-
-.teal {
-  background: teal;
-}
-
-.pink {
-  background: pink;
-}
-
-.yellow {
-  background: yellow;
 }
 
 #pixel-board {
