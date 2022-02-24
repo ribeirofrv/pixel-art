@@ -2,8 +2,8 @@ const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
 const clearBoard = document.querySelector('#clear-board');
 const buttonVQV = document.querySelector('#generate-board');
-// const color = document.querySelectorAll('.color');
-// const buttonRandom = document.querySelector('#random-color');
+const color = document.querySelectorAll('.color');
+const buttonRandom = document.querySelector('#random-color');
 
 // Cria Quadro de Pixel
 // Em desenvolvimento...
@@ -74,10 +74,26 @@ const generateBoard = () => {
   });
 };
 
+// Gera Paleta de Cores Aleatórias
+const generateRGB = () => {
+  const red = Math.random() * 255;
+  const green = Math.random() * 255;
+  const blue = Math.random() * 255;
+  return `rgb(${red}, ${green}, ${blue})`;
+};
+
+const randomColors = () => {
+  for (let index = 1; index < color.length; index += 1) {
+    color[index].style.backgroundColor = generateRGB();
+  }
+};
+
 window.onload = () => {
   document.querySelector('.color').classList.add('selected');
+  randomColors();
   createPixelBoard(5);
   generateBoard();
   toPaint();
   toClearBoard();
+  buttonRandom.addEventListener('click', randomColors);
 };
