@@ -22,36 +22,59 @@ header {
 }
 
 #title {
-  font-size: 14px;
+  margin-top: 15px;
+  font-size: 12px;
 }
 
 #menu {
-  background: rgba(185, 176, 194, 1);
-  border: 5px solid rgba(64, 66, 61);
+  background: rgba(185, 176, 194);
+  border: 5px solid rgba(64, 66, 61, 0.9);
   border-radius: 8px;
-  display: block;
-  margin: 15px auto;
-  width: 40%;
-  padding: 15px;
+  margin: 5px auto;
+  width: 30%;
+  padding: 10px;
+}
+
+#color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2px;
+}
+
+#color-palette .color {
+  border: solid rgba(64, 66, 61, 0.5);
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.standardSize {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+button {
+  border: solid rgba(64, 66, 61, 0.5);
+  border-radius: 3px;
+  padding: 4px;
+  text-transform: uppercase;
+
+  /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-shadow */
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 #random-color {
   background: rgba(61, 153, 26, 1);
   color: aliceblue;
-  padding: 10px;
-}
-
-#color-palette .color {
-  border: solid rgba(64, 66, 61);
-  border-radius: 5px;
-}
-
-.standardSize {
-  display: inline-block;
-  width: 40px;
   height: 40px;
-  border: 1px solid black;
-  cursor: pointer;
+  align-self: center;
 }
 
 #clear-board {
@@ -59,19 +82,16 @@ header {
   color: aliceblue;
 }
 
+#board-size {
+  border: 5px solid rgba(64, 66, 61, 0.9);
+  border-radius: 3px;
+  width: 120px;
+  padding: 2px;
+}
+
 #generate-board {
   background: rgba(39, 105, 153, 1);
   color: aliceblue;
-}
-
-button {
-  border: solid rgba(64, 66, 61);
-  border-radius: 3px;
-  padding: 5px;
-  text-transform: uppercase;
-
-  /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-shadow */
-  text-shadow: 1px 1px 2px black;
 }
 
 .black {

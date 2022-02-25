@@ -71,6 +71,7 @@ const generateBoard = () => {
       resetBoard();
       createPixelBoard(boardSize);
     }
+    toClearBoard();
   });
 };
 
